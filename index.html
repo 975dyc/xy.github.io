@@ -1,0 +1,1444 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>享月汤皇 2027 全年度品牌投放规划</title>
+<style>
+  :root{
+    --paper:#FCFBF6;
+    --paper-2:#F6EFE1;
+    --card:#FFFFFF;
+    --ink:#221E18;
+    --ink-2:#4E463C;
+    --muted:#8D8274;
+    --line:#E9E0D1;
+    --line-2:#F2EBE1;
+    --gold:#A9803C;
+    --gold-2:#D8BE8C;
+    --gold-3:#8A6831;
+    --plat-meituan:#A9803C;
+    --plat-douyin:#33302A;
+    --plat-xhs:#A97C5E;
+    --plat-shipin:#78836E;
+    --shadow:0 1px 2px rgba(33,29,25,.04),0 8px 24px -16px rgba(33,29,25,.18);
+    --serif:"Songti SC","STSong","Noto Serif SC","Source Han Serif SC",Georgia,serif;
+    --sans:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 80% -10%, #f6ece0 0%, rgba(246,236,224,0) 60%),
+      radial-gradient(900px 500px at -10% 30%, #f2ece2 0%, rgba(242,236,226,0) 55%),
+      var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:15px;
+    line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:#F1E4C8;}
+
+  /* ---------- 结构 ---------- */
+  .wrap{max-width:1120px;margin:0 auto;padding:0 40px;}
+  section.wrap{padding:86px 40px;position:relative;}
+  section + section{border-top:1px solid var(--line-2);}
+  .sec-head{margin-bottom:44px;}
+  .sec-num{
+    font-family:var(--serif);
+    font-size:12.5px;font-weight:600;letter-spacing:.3em;color:var(--gold-3);
+    display:flex;align-items:center;gap:14px;margin-bottom:14px;text-transform:uppercase;
+  }
+  .sec-num::after{content:"";height:2px;flex:0 0 62px;background:var(--gold);opacity:.6;}
+  h2{
+    font-family:var(--serif);
+    font-size:36px;font-weight:700;letter-spacing:.01em;color:var(--ink);
+    margin:0 0 14px;line-height:1.3;position:relative;padding-bottom:15px;
+  }
+  h2::after{
+    content:"";position:absolute;left:0;bottom:0;width:74px;height:2px;
+    background:linear-gradient(90deg,var(--gold),rgba(169,128,60,0));
+  }
+  .sec-lead{margin:0;color:var(--ink-2);max-width:62ch;font-size:14.5px;}
+
+  /* ---------- 顶部进度 ---------- */
+  .progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--gold-2),var(--gold));width:0;z-index:80;transition:width .1s linear;}
+  .nav{position:fixed;right:26px;top:50%;transform:translateY(-50%);z-index:70;display:flex;flex-direction:column;gap:14px;}
+  .nav a{display:flex;align-items:center;gap:10px;text-decoration:none;justify-content:flex-end;}
+  .nav i{width:7px;height:7px;border-radius:50%;background:#D4C9B7;transition:.25s;display:block;}
+  .nav span{font-size:11.5px;color:var(--muted);opacity:0;transform:translateX(4px);transition:.25s;white-space:nowrap;letter-spacing:.04em;}
+  .nav a:hover span,.nav a.on span{opacity:1;transform:translateX(0);}
+  .nav a.on i{background:var(--gold);box-shadow:0 0 0 4px rgba(176,138,69,.14);}
+
+  /* ---------- 封面 ---------- */
+  .hero{padding:92px 0 74px;}
+  .hero-kicker{
+    font-family:var(--serif);font-size:12px;letter-spacing:.4em;color:var(--gold);
+    margin-bottom:26px;
+  }
+  h1{
+    font-family:var(--serif);font-weight:600;
+    font-size:clamp(34px,5.2vw,58px);line-height:1.22;letter-spacing:.01em;
+    margin:0 0 20px;
+  }
+  h1 em{
+    font-style:normal;
+    background:linear-gradient(102deg,#B78D45 0%,#8B6524 46%,#C9A75F 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero-sub{
+    font-family:var(--serif);font-size:19px;color:var(--ink-2);letter-spacing:.12em;margin:0;
+  }
+  .hero-stats{
+    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
+    margin-top:52px;background:var(--line);border:1px solid var(--line);
+  }
+  .hs{background:var(--paper);padding:22px 24px;}
+  .hs b{display:block;font-family:var(--serif);font-size:32px;line-height:1.1;letter-spacing:.01em;}
+  .hs b small{font-size:14px;margin-left:3px;color:var(--ink-2);font-family:var(--sans);}
+  .hs span{display:block;margin-top:7px;font-size:12px;color:var(--muted);letter-spacing:.1em;}
+
+  /* ---------- 通用组件 ---------- */
+  .kw{
+    color:var(--gold);
+    font-weight:600;
+    background:linear-gradient(transparent 62%, rgba(176,138,69,.13) 62%);
+    padding:0 1px;
+  }
+  .tag{
+    display:inline-block;font-size:11px;letter-spacing:.08em;
+    padding:2px 9px;border:1px solid var(--line);color:var(--ink-2);
+    background:#FCFBF6;border-radius:2px;margin:0 6px 6px 0;
+  }
+  .tag.fill{background:var(--gold-3);border-color:var(--gold-3);color:#fff;}
+
+  /* ---------- 01 框架 ---------- */
+  .frame{display:grid;gap:0;}
+  .frow{
+    display:grid;grid-template-columns:104px 1fr;gap:26px;
+    padding:26px 0;border-top:1px solid var(--line-2);
+    align-items:start;
+  }
+  .frow:first-child{border-top:0;padding-top:0;}
+  .frow:last-child{padding-bottom:0;}
+  .flabel{
+    font-family:var(--serif);font-size:12px;letter-spacing:.2em;color:var(--muted);
+    padding-top:4px;
+  }
+  .flabel b{display:block;color:var(--gold);font-size:11px;letter-spacing:.24em;margin-bottom:6px;}
+  .fpills{display:flex;flex-wrap:wrap;gap:10px;}
+  .fpill{
+    border:1px solid var(--line);background:var(--card);
+    padding:10px 16px;font-size:13.5px;color:var(--ink-2);
+    box-shadow:var(--shadow);position:relative;
+  }
+  .fpill b{font-family:var(--serif);font-size:15px;color:var(--ink);display:block;font-weight:600;letter-spacing:.02em;}
+  .fpill i{font-style:normal;font-size:11.5px;color:var(--muted);letter-spacing:.06em;}
+  .fplat{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;width:100%;}
+  .fplat .fpill{padding:13px 14px;}
+  .fplat .fpill::before{
+    content:"";position:absolute;left:0;top:0;width:3px;height:100%;background:currentColor;opacity:.9;
+  }
+  .ftime{display:grid;grid-template-columns:1.05fr 1.05fr 3.4fr 1fr 1fr 2fr 2fr;width:100%;border:1px solid var(--line);background:var(--card);overflow:hidden;}
+  .ftime div{min-width:0;padding:11px 9px;font-size:12px;color:var(--ink-2);border-right:1px solid var(--line-2);line-height:1.5;}
+  .ftime div:last-child{border-right:0;}
+  .ftime div b{display:block;white-space:nowrap;font-family:var(--serif);font-size:13px;color:var(--ink);margin-bottom:2px;}
+  .ftime .hl{background:#FAF5E9;}
+
+  /* ---------- 02 平台卡 ---------- */
+  .plats{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .pcard{
+    background:var(--card);border:1px solid var(--line);
+    padding:26px 26px 22px;box-shadow:var(--shadow);position:relative;
+  }
+  .pcard::after{
+    content:"";position:absolute;left:0;top:0;width:100%;height:3px;background:var(--c);
+  }
+  .pcard-top{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:6px;}
+  .pcard h3{
+    font-family:var(--serif);font-size:23px;margin:0;font-weight:700;letter-spacing:.03em;
+  }
+  .role{font-size:11.5px;letter-spacing:.1em;color:var(--c);border:1px solid var(--c);padding:1px 8px;white-space:nowrap;}
+  .aud{font-size:13px;color:var(--muted);margin:0 0 18px;line-height:1.65;}
+  .pcard .money{
+    display:flex;align-items:baseline;gap:8px;padding:12px 0;
+    border-top:1px dashed var(--line);border-bottom:1px dashed var(--line);margin-bottom:16px;
+  }
+  .pcard .money b{font-family:var(--serif);font-size:26px;line-height:1;}
+  .pcard .money span{font-size:12px;color:var(--muted);}
+  .pcard .money em{margin-left:auto;font-style:normal;font-size:12px;color:var(--c);letter-spacing:.08em;}
+  .pcard ul{margin:0;padding:0;list-style:none;}
+  .pcard li{
+    position:relative;padding-left:15px;font-size:13.5px;color:var(--ink-2);margin-bottom:7px;line-height:1.68;
+  }
+  .pcard li::before{
+    content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;background:var(--c);opacity:.55;
+  }
+  .anchor{
+    margin-top:16px;padding-top:14px;border-top:1px solid var(--line-2);
+    font-size:12.5px;color:var(--muted);
+  }
+  .anchor b{color:var(--ink);font-weight:600;}
+
+  /* ---------- 03 预算 ---------- */
+  .budget{display:grid;grid-template-columns:300px 1fr;gap:44px;align-items:center;}
+  .donut{position:relative;text-align:center;}
+  .donut .center{
+    position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:center;
+  }
+  .donut .center b{font-family:var(--serif);font-size:34px;line-height:1;}
+  .donut .center span{font-size:11.5px;color:var(--muted);letter-spacing:.16em;margin-top:8px;}
+  .legend{display:flex;flex-direction:column;gap:14px;}
+  .lg{display:grid;grid-template-columns:88px 1fr 74px;gap:14px;align-items:center;font-size:13px;}
+  .lg i{width:8px;height:8px;display:inline-block;margin-right:8px;background:var(--c);}
+  .track{height:6px;background:var(--paper-2);position:relative;overflow:hidden;}
+  .track b{position:absolute;left:0;top:0;height:100%;background:var(--c);display:block;}
+  .lg .val{text-align:right;font-family:var(--serif);font-size:14px;}
+  .lg .val small{color:var(--muted);font-family:var(--sans);font-size:11px;margin-left:4px;}
+
+  .chart{
+    margin-top:64px;background:var(--card);border:1px solid var(--line);
+    padding:30px 34px 20px;box-shadow:var(--shadow);
+  }
+  .chart-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:22px;gap:20px;flex-wrap:wrap;}
+  .chart-head h3{font-family:var(--serif);font-size:19px;margin:0;font-weight:700;letter-spacing:.04em;}
+  .chart-head p{margin:0;font-size:12px;color:var(--muted);}
+  .plot{height:210px;padding-top:26px;box-sizing:border-box;}
+  .bars{display:flex;align-items:flex-end;gap:13px;height:100%;}
+  .bar{flex:1;height:100%;position:relative;display:flex;align-items:flex-end;}
+  .bar .col{
+    width:100%;background:linear-gradient(180deg,#EFEAE1,#DCD5C8);position:relative;
+  }
+  .bar .col .v{
+    position:absolute;top:-19px;left:50%;transform:translateX(-50%);
+    font-family:var(--serif);font-size:12px;color:var(--ink-2);letter-spacing:.02em;
+  }
+  .bar.peak .col{background:linear-gradient(180deg,var(--gold-2),var(--gold));}
+  .bar.peak .col .v{color:var(--gold);font-weight:600;}
+  .xaxis{display:flex;gap:13px;padding-top:9px;border-top:1px solid var(--line);margin-top:0;}
+  .xaxis span{
+    flex:1;text-align:center;font-family:var(--serif);font-size:12px;color:var(--ink-2);line-height:1.4;
+  }
+  .xaxis span em{display:block;font-style:normal;font-family:var(--sans);font-size:9.5px;color:var(--muted);letter-spacing:.02em;}
+  .xaxis span em.hot{color:var(--gold);}
+
+  /* ---------- 04 节奏 ---------- */
+  .rail{position:relative;padding-left:0;}
+  .rrow{
+    display:grid;grid-template-columns:132px 1fr;gap:28px;
+    padding:22px 0;border-bottom:1px solid var(--line-2);align-items:start;
+  }
+  .rrow:last-child{border-bottom:0;}
+  .rtime{font-family:var(--serif);font-size:15px;letter-spacing:.04em;color:var(--ink);padding-top:2px;}
+  .rtime span{display:block;font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.14em;margin-top:4px;}
+  .rbody h4{margin:0 0 6px;font-family:var(--serif);font-size:17.5px;font-weight:600;letter-spacing:.02em;}
+  .rbody p{margin:0 0 10px;font-size:13.5px;color:var(--ink-2);line-height:1.72;}
+  .rrow.big .rtime{color:var(--gold);}
+  .rrow.big .rbody h4{color:var(--gold);}
+
+  .rules{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);margin-top:40px;}
+  .rule{background:var(--paper);padding:20px 20px 22px;}
+  .rule b{font-family:var(--serif);font-size:14.5px;display:block;margin-bottom:6px;}
+  .rule span{font-size:12.5px;color:var(--muted);line-height:1.65;}
+
+  /* ---------- 05 月度 ---------- */
+  .months{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .mcard{
+    background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);
+    display:flex;flex-direction:column;
+  }
+  .mhead{
+    display:flex;align-items:flex-start;gap:16px;padding:20px 22px 16px;
+    border-bottom:1px solid var(--line-2);position:relative;
+  }
+  .mno{
+    font-family:var(--serif);font-size:26px;line-height:1;color:#E3D6BE;
+    font-weight:600;letter-spacing:-.02em;min-width:38px;
+  }
+  .mtit{flex:1;min-width:0;}
+  .mtit h3{font-family:var(--serif);font-size:18.5px;margin:0 0 5px;font-weight:700;line-height:1.4;}
+  .mtit p{margin:0;font-size:12px;color:var(--muted);line-height:1.6;}
+  .msum{
+    font-family:var(--serif);font-size:29px;font-weight:700;color:var(--gold-3);
+    border-left:1px solid var(--line);padding-left:15px;text-align:right;white-space:nowrap;line-height:1.05;
+  }
+  .msum small{display:block;font-family:var(--sans);font-size:10.5px;font-weight:400;color:var(--muted);letter-spacing:.1em;margin-top:5px;}
+  .mcard.key .mhead{background:#FBF6E9;}
+  .mcard.key .mno{color:var(--gold-2);}
+  .flag{
+    position:absolute;top:-1px;right:-1px;background:var(--gold-3);color:#fff;
+    font-size:10px;letter-spacing:.12em;padding:3px 9px;
+  }
+  .mbody{padding:6px 22px 18px;flex:1;}
+  .mrow{padding:13px 0;border-bottom:1px dotted var(--line);}
+  .mrow:last-child{border-bottom:0;padding-bottom:0;}
+  .mrow-top{display:flex;align-items:center;gap:9px;margin-bottom:7px;}
+  .pm{width:7px;height:7px;background:var(--c);flex:0 0 auto;}
+  .pname{font-size:13px;font-weight:600;letter-spacing:.04em;color:var(--ink);}
+  .pbud{
+    font-family:var(--serif);font-size:15px;font-weight:700;color:var(--c);margin-left:auto;
+    letter-spacing:.02em;background:rgba(169,128,60,.11);padding:1px 9px;border-radius:2px;
+  }
+  .mrow ul{margin:0;padding:0;list-style:none;}
+  .mrow li{
+    font-size:12.5px;line-height:1.72;color:var(--ink-2);position:relative;padding-left:11px;margin-bottom:3px;
+  }
+  .mrow li:last-child{margin-bottom:0;}
+  .mrow li::before{content:"";position:absolute;left:0;top:.72em;width:4px;height:1px;background:var(--c);opacity:.6;}
+
+  /* ---------- 06 目标 ---------- */
+  .goals{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+  .gcard{background:var(--card);border:1px solid var(--line);padding:24px 26px;box-shadow:var(--shadow);position:relative;}
+  .gcard::after{content:"";position:absolute;left:0;top:0;width:3px;height:100%;background:var(--c);}
+  .gcard h3{font-family:var(--serif);font-size:20.5px;margin:0 0 18px;display:flex;align-items:center;gap:10px;font-weight:700;}
+  .gcard h3 span{font-family:var(--sans);font-size:11px;color:var(--muted);letter-spacing:.1em;font-weight:400;}
+  .gcol{margin-bottom:16px;}
+  .gcol:last-child{margin-bottom:0;}
+  .gcol h5{
+    font-size:11.5px;letter-spacing:.18em;color:var(--gold-3);margin:0 0 11px;
+    padding:0 0 8px 11px;border-bottom:1px solid var(--line-2);font-weight:700;
+    border-left:3px solid var(--gold);
+  }
+  .gcol ul{margin:0;padding:0;list-style:none;}
+  .gcol li{font-size:13.5px;color:var(--ink-2);line-height:2;position:relative;padding-left:14px;margin-bottom:2px;}
+  .gcol li::before{content:"";position:absolute;left:0;top:.85em;width:5px;height:5px;border:1px solid var(--c);border-radius:50%;}
+  .kpi{
+    font-family:var(--serif);font-size:19px;font-weight:700;color:var(--gold-3);
+    letter-spacing:.01em;margin:0 2px;padding:0 1px;
+    background:linear-gradient(transparent 66%, rgba(169,128,60,.18) 66%);
+  }
+
+  /* ---------- 07 速览表 ---------- */
+  .matrix{width:100%;border-collapse:collapse;background:var(--card);box-shadow:var(--shadow);font-size:13px;}
+  .matrix th{
+    background:linear-gradient(180deg,#9A753D,#825F2C);
+    color:#FDF8EC;font-family:var(--serif);font-weight:700;font-size:13.5px;
+    letter-spacing:.14em;padding:15px 10px;text-align:center;border:1px solid #7B5927;
+  }
+  .matrix th:first-child,.matrix td:first-child{width:74px;}
+  .matrix th:nth-child(2){text-align:left;padding-left:16px;width:auto;}
+  .matrix td{border:1px solid var(--line-2);padding:11px 10px;text-align:center;font-family:var(--serif);font-size:13px;}
+  .matrix td.theme{
+    text-align:left;font-family:var(--sans);font-size:12.5px;color:var(--ink-2);padding-left:16px;line-height:1.6;
+  }
+  .matrix td.mo{font-size:13px;color:var(--ink);font-family:var(--sans);letter-spacing:.08em;font-weight:600;}
+  .matrix td.tot{font-weight:700;font-size:14px;background:#FDFAF2;}
+  .matrix tr.sum td{background:#F3E8D4;font-weight:700;font-size:14px;border-top:2px solid var(--gold-3);}
+  .matrix tr:hover td{background:#FCF9F0;}
+  .matrix tr:hover td.tot{background:#FBF2E2;}
+  .heat{display:inline-block;padding:1px 7px;border-radius:2px;}
+  .heat.hot{
+    background:linear-gradient(135deg,#A9803C,#8A6831)!important;color:#fff;font-weight:700;
+    box-shadow:0 1px 5px rgba(138,104,49,.35);letter-spacing:.02em;
+  }
+
+  /* ---------- 就地编辑 ---------- */
+  .ed{outline:0;cursor:text;border-radius:3px;transition:background .15s;}
+  .ed:hover{background:rgba(176,138,69,.06);}
+  .ed:focus{background:rgba(176,138,69,.11);box-shadow:0 0 0 4px rgba(176,138,69,.11);}
+  .utilbar{position:fixed;right:26px;bottom:26px;z-index:90;display:flex;gap:9px;}
+  .ub{
+    width:36px;height:36px;border-radius:50%;cursor:pointer;
+    border:1px solid var(--line);background:var(--card);
+    box-shadow:0 2px 10px rgba(34,30,24,.10);
+    display:flex;align-items:center;justify-content:center;
+    color:var(--gold-3);transition:.2s;padding:0;
+  }
+  .ub:hover{background:var(--gold-3);border-color:var(--gold-3);color:#fff;transform:translateY(-1px);}
+  .ub svg{width:15px;height:15px;display:block;}
+  .toast{
+    position:fixed;right:74px;bottom:34px;z-index:95;
+    background:var(--gold-3);color:#fff;font-size:12px;letter-spacing:.08em;
+    padding:7px 15px;border-radius:2px;opacity:0;transform:translateY(6px);
+    transition:.25s;pointer-events:none;white-space:nowrap;
+  }
+  .toast.on{opacity:1;transform:translateY(0);}
+
+  @media (max-width:1239px){
+    .nav{display:none;}
+  }
+  @media (max-width:900px){
+    .wrap{padding:0 22px;}
+    section.wrap{padding:60px 22px;}
+    .hero-stats{grid-template-columns:1fr 1fr;}
+    .plats,.months,.goals{grid-template-columns:1fr;}
+    .budget{grid-template-columns:1fr;gap:34px;}
+    h2{font-size:27px;}
+    .msum{font-size:24px;}
+    .frow{grid-template-columns:1fr;gap:12px;}
+    .ftime{grid-template-columns:1fr 1fr;}
+    .ftime div{border-bottom:1px solid var(--line-2);}
+    .rules{grid-template-columns:1fr 1fr;}
+    .nav{display:none;}
+    .fplat{grid-template-columns:1fr 1fr;}
+    .matrix{font-size:11.5px;}
+    .matrix td.theme{display:none;}
+  }
+  @media print{
+    body{background:#fff;}
+    .nav,.progress,.utilbar,.toast{display:none;}
+    section.wrap{padding:36px 40px;page-break-inside:auto;}
+    .mcard,.pcard,.gcard,.chart{page-break-inside:avoid;}
+    .months{grid-template-columns:1fr 1fr;}
+    .ed:hover,.ed:focus{background:none;box-shadow:none;}
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+  }
+</style>
+</head>
+<body>
+<div class="progress" id="prog" style="width: 0.411192%;"></div>
+<nav class="nav" id="nav">
+  <a href="#sec1" class=""><span>全局框架</span><i></i></a>
+  <a href="#sec2" class=""><span>平台分工</span><i></i></a>
+  <a href="#sec3" class=""><span>预算配置</span><i></i></a>
+  <a href="#sec4" class=""><span>全年节奏</span><i></i></a>
+  <a href="#sec5" class=""><span>月度执行</span><i></i></a>
+  <a href="#sec6" class=""><span>年度目标</span><i></i></a>
+  <a href="#sec7" class=""><span>全年速览</span><i></i></a>
+</nav>
+
+<header class="hero wrap">
+  <div class="hero-kicker">2027 ANNUAL BRAND MEDIA PLAN</div>
+  <h1 class="">享月汤皇 <em class="">2027</em> 全年度<br>品牌投放规划</h1>
+  <p class="hero-sub">四大平台 · 十二个月 · 一条主线</p>
+  <div class="hero-stats">
+    <div class="hs"><b class="">150<small class="">万</small></b><span class="">年度投放预算</span></div>
+    <div class="hs"><b class="">4<small class="">大平台</small></b><span class="">美团 / 抖音 / 小红书 / 视频号</span></div>
+    <div class="hs"><b class="">6<small class="">段节奏</small></b><span class="">淡季 · 野菌季 · 松茸季 · 周年庆 · 节庆 · 养生季</span></div>
+    <div class="hs"><b class="">20<small class="">万</small></b><span class="">8 月周年庆 · 全年单月最高</span></div>
+  </div>
+</header>
+
+<!-- 01 -->
+<section id="sec1" class="wrap">
+  <div class="sec-head">
+    <div class="sec-num">01 / Framework</div>
+    <h2 class="">框架：内核、平台、节奏</h2>
+    <p class="sec-lead">全年只讲一件事——<span class="kw">菌汤火锅天花板</span>。四个平台分工承接不同人群，十二个月按六段节奏推进，淡季种草、旺季收单。</p>
+  </div>
+
+  <div class="frame">
+    <div class="frow">
+      <div class="flabel"><b class="">LAYER 01</b>年度内核</div>
+      <div class="fpills">
+        <div class="fpill"><b class="">菌汤火锅天花板</b><i class="">品类心智 · 全年统一话术</i></div>
+        <div class="fpill"><b class="">宋式美学空间</b><i class="">体验差异 · 出片与仪式感</i></div>
+        <div class="fpill"><b class="">自有农场 · RO 净水 · 有机食材</b><i class="">信任底座 · 溯源可讲</i></div>
+        <div class="fpill"><b class="">一人一锅 · 不用现场煮菌</b><i class="">产品卖点 · 一句话记忆</i></div>
+      </div>
+    </div>
+
+    <div class="frow">
+      <div class="flabel"><b class="">LAYER 02</b>平台分工</div>
+      <div class="fplat">
+        <div class="fpill" style="color:#A9803C"><b class="">美团点评</b><i class="">转化主阵地 · 52.5 万</i></div>
+        <div class="fpill" style="color:#33302A"><b class="">抖音</b><i class="">同城破圈 · 42 万</i></div>
+        <div class="fpill" style="color:#A97C5E"><b class="">小红书</b><i class="">种草心智 · 37.5 万</i></div>
+        <div class="fpill" style="color:#78836E"><b class="">视频号</b><i class="">私域老客 · 18 万</i></div>
+      </div>
+    </div>
+
+    <div class="frow">
+      <div class="flabel"><b class="">LAYER 03</b>时间节奏</div>
+      <div class="ftime">
+        <div class=""><b class="">1 月</b>年夜饭预订</div>
+        <div class=""><b class="">2 月</b>淡季蓄力</div>
+        <div class="hl"><b class="">3–6 月</b>春夏野菌季</div>
+        <div class="hl"><b class="">7 月</b>松茸季</div>
+        <div class="hl"><b class="">8 月</b>周年庆</div>
+        <div class=""><b class="">9–10 月</b>中秋 · 国庆</div>
+        <div class=""><b class="">11–12 月</b>养生季</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 02 -->
+<section id="sec2" class="wrap">
+  <div class="sec-head">
+    <div class="sec-num">02 / Platforms</div>
+    <h2 class="">四平台分工：一个主场，三种配合</h2>
+    <p class="sec-lead">美团负责把客人接到店里，抖音负责同城破圈，小红书负责撑起品牌性与年轻客认知，视频号守住高价值老客复购。每个平台都有固定人群、固定打法、固定话术。</p>
+  </div>
+
+  <div class="plats">
+    <article class="pcard" style="--c:#A9803C">
+      <div class="pcard-top">
+        <h3 class="">美团点评</h3>
+        <span class="role">转化主阵地</span>
+      </div>
+      <p class="aud">20–50 岁主力客群：商务宴请、品质家宴为主；兼顾年轻搜索客。</p>
+      <div class="money"><b class="">52.5</b><span class="">万元 / 全年</span><em class="">35%</em></div>
+      <ul>
+        <li class=""><b class="">推广通 + 点星笔记</b>双工具并行，评价与曝光一起做。</li>
+        <li class="">关键词分两套：<span class="kw">商务 / 家宴</span>长线词，<span class="kw">约会 / 闺蜜聚餐</span>年轻词。</li>
+        <li class="">淡季沉淀品牌评价与食材溯源评价，旺季节日承接家宴订单。</li>
+        <li class="">核心考核：必吃榜冲榜、评价分、套餐核销。</li>
+      </ul>
+      <div class="anchor">投放红线：<b class="">不做游客向投放</b>，全部本地精准客。</div>
+    </article>
+
+    <article class="pcard" style="--c:#33302A">
+      <div class="pcard-top">
+        <h3 class="">抖音</h3>
+        <span class="role">同城流量破圈</span>
+      </div>
+      <p class="aud">25–45 岁，商务与年轻人兼顾；重点拉闺蜜、朋友小聚。</p>
+      <div class="money"><b class="">42</b><span class="">万元 / 全年</span><em class="">28%</em></div>
+      <ul>
+        <li class=""><b class="">本地推 + 官号短视频 + 节点直播</b>三件套。</li>
+        <li class="">一条内容出双版本：<span class="kw">稳重版</span>给商务家宴，<span class="kw">氛围感轻松版</span>给年轻人。</li>
+        <li class="">大节点集中投放，8.16 周年庆直播为全年最大投放重心。</li>
+      </ul>
+      <div class="anchor">心智锚点：<b class="">菌汤火锅天花板 · 一人一锅 · 不用现场煮菌子</b>。</div>
+    </article>
+
+    <article class="pcard" style="--c:#A97C5E">
+      <div class="pcard-top">
+        <h3 class="">小红书</h3>
+        <span class="role">种草心智阵地</span>
+      </div>
+      <p class="aud">22–40 岁女性为主：闺蜜、约会、年轻精致人群；承接品牌故事与出片场景。</p>
+      <div class="money"><b class="">37.5</b><span class="">万元 / 全年</span><em class="">25%</em></div>
+      <ul>
+        <li class=""><b class="">中腰部达人 + 素人铺笔记 + 薯条加热</b>，三层推进。</li>
+        <li class="">内容侧重：宋式美学空间、仪式感、农场溯源、鲜菌现采。</li>
+        <li class="">持续打「菌汤火锅天花板」心智，解决品牌性不足，吸引年轻新客。</li>
+      </ul>
+      <div class="anchor">核心任务：<b class="">把「好吃」讲成「值得专程来」</b>。</div>
+    </article>
+
+    <article class="pcard" style="--c:#78836E">
+      <div class="pcard-top">
+        <h3 class="">视频号</h3>
+        <span class="role">私域老客</span>
+      </div>
+      <p class="aud">30–50 岁核心存量客：商务、家庭老客、会员。</p>
+      <div class="money"><b class="">18</b><span class="">万元 / 全年</span><em class="">12%</em></div>
+      <ul>
+        <li class="">会员触达、品牌故事长内容、农场溯源纪实。</li>
+        <li class=""><b class="">少低价引流</b>，主打预订优先、会员专属权益、健康食材理念。</li>
+        <li class="">目标是巩固高价值老客复购，而不是拉新。</li>
+      </ul>
+      <div class="anchor">一句话定位：<b class="">老客的专属通道</b>。</div>
+    </article>
+  </div>
+</section>
+
+<!-- 03 -->
+<section id="sec3" class="wrap">
+  <div class="sec-head">
+    <div class="sec-num">03 / Budget</div>
+    <h2 class="">预算配置：提升品牌声量的同时兼顾到店转化</h2>
+    <p class="sec-lead">全年 150 万，美团与抖音合计占 63%，承担到店与破圈；小红书 25% 养心智；视频号 12% 维护老客。月度投放随节点起伏，7 月松茸季与 8 月周年庆为两个高点，8 月单月 20 万，为全年唯一超常规投入。</p>
+  </div>
+
+  <div class="budget">
+    <div class="donut">
+      <svg viewBox="0 0 200 200" width="100%" height="auto" role="img" aria-label="平台预算占比">
+        <circle cx="100" cy="100" r="70" fill="none" stroke="#F2EBE1" stroke-width="26"></circle>
+        <circle cx="100" cy="100" r="70" fill="none" stroke="#A9803C" stroke-width="26" stroke-dasharray="153.9 285.9" stroke-dashoffset="0" transform="rotate(-90 100 100)"></circle>
+        <circle cx="100" cy="100" r="70" fill="none" stroke="#33302A" stroke-width="26" stroke-dasharray="123.1 316.7" stroke-dashoffset="-153.9" transform="rotate(-90 100 100)"></circle>
+        <circle cx="100" cy="100" r="70" fill="none" stroke="#A97C5E" stroke-width="26" stroke-dasharray="110 329.8" stroke-dashoffset="-277" transform="rotate(-90 100 100)"></circle>
+        <circle cx="100" cy="100" r="70" fill="none" stroke="#78836E" stroke-width="26" stroke-dasharray="52.8 387" stroke-dashoffset="-387" transform="rotate(-90 100 100)"></circle>
+      </svg>
+      <div class="center"><b class="">150</b><span class="">万元 · 全年</span></div>
+    </div>
+
+    <div class="legend">
+      <div class="lg" style="--c:#A9803C">
+        <span class=""><i></i>美团点评</span>
+        <span class="track"><b style="width:100%"></b></span>
+        <span class="val">52.5<small class="">万</small></span>
+      </div>
+      <div class="lg" style="--c:#33302A">
+        <span class=""><i></i>抖音</span>
+        <span class="track"><b style="width:80%"></b></span>
+        <span class="val">42<small class="">万</small></span>
+      </div>
+      <div class="lg" style="--c:#A97C5E">
+        <span class=""><i></i>小红书</span>
+        <span class="track"><b style="width:71.4%"></b></span>
+        <span class="val">37.5<small class="">万</small></span>
+      </div>
+      <div class="lg" style="--c:#78836E">
+        <span class=""><i></i>视频号</span>
+        <span class="track"><b style="width:34.3%"></b></span>
+        <span class="val">18<small class="">万</small></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="chart">
+    <div class="chart-head">
+      <h3 class="">月度投放曲线</h3>
+      <p class="">单位：万元　｜　深色为关键节点月</p>
+    </div>
+    <div class="plot">
+      <div class="bars">
+        <div class="bar peak"><div class="col" style="height:62.5%"><span class="v">12.5</span></div></div>
+        <div class="bar"><div class="col" style="height:42.5%"><span class="v">8.5</span></div></div>
+        <div class="bar"><div class="col" style="height:50%"><span class="v">10</span></div></div>
+        <div class="bar"><div class="col" style="height:52.5%"><span class="v">10.5</span></div></div>
+        <div class="bar peak"><div class="col" style="height:60%"><span class="v">12</span></div></div>
+        <div class="bar"><div class="col" style="height:60%"><span class="v">12</span></div></div>
+        <div class="bar peak"><div class="col" style="height:67.5%"><span class="v">13.5</span></div></div>
+        <div class="bar peak"><div class="col" style="height:100%"><span class="v">20</span></div></div>
+        <div class="bar"><div class="col" style="height:67.5%"><span class="v">13.5</span></div></div>
+        <div class="bar"><div class="col" style="height:67.5%"><span class="v">13.5</span></div></div>
+        <div class="bar"><div class="col" style="height:55%"><span class="v">11</span></div></div>
+        <div class="bar"><div class="col" style="height:62.5%"><span class="v">12.5</span></div></div>
+      </div>
+      </div>
+    </div>
+    <div class="xaxis">
+      <span class="">1<em class="hot">年夜饭</em></span>
+      <span class="">2<em class="">淡季</em></span>
+      <span class="">3<em class="">女神节</em></span>
+      <span class="">4<em class="">寻鲜</em></span>
+      <span class="">5<em class="hot">野菌</em></span>
+      <span class="">6<em class="">端午</em></span>
+      <span class="">7<em class="hot">松茸季</em></span>
+      <span class="">8<em class="hot">周年庆</em></span>
+      <span class="">9<em class="">中秋</em></span>
+      <span class="">10<em class="">国庆</em></span>
+      <span class="">11<em class="hot">养生季</em></span>
+      <span class="">12<em class="">年夜饭</em></span>
+    </div>
+  
+</section>
+
+<!-- 04 -->
+<section id="sec4" class="wrap">
+  <div class="sec-head">
+    <div class="sec-num">04 / Rhythm</div>
+    <h2 class="">全年节奏：六段主线，两个峰值</h2>
+    <p class="sec-lead">内容主线随季节走：淡季讲品牌与食材，春夏季讲野菌，7 月讲松茸，8 月讲周年庆，入冬讲养生。节假日只做家宴与约会，不追游客流量。</p>
+  </div>
+
+  <div class="rail">
+    <div class="rrow">
+      <div class="rtime">1 月<span class="">年夜饭</span></div>
+      <div class="rbody">
+        <h4 class="">年夜饭预订 · 家宴商务与品质团圆</h4>
+        <p class="">包间套餐上线，推广通锁定高端家宴与商务尾牙；双版本内容同步，兼顾商务稳重与年轻团圆的氛围感。</p>
+        <div><span class="tag">年夜饭包间</span><span class="tag">商务尾牙</span><span class="tag">家庭聚餐</span></div>
+      </div>
+    </div>
+
+    <div class="rrow">
+      <div class="rtime">2 月<span class="">淡季蓄力</span></div>
+      <div class="rbody">
+        <h4 class="">节后淡季 · 只种心智，不冲转化</h4>
+        <p class="">重点输出品牌故事、自有农场、RO 净水、有机食材等健康价值，为春夏野菌季蓄水。</p>
+        <div><span class="tag">品牌故事</span><span class="tag">农场溯源</span><span class="tag">健康食材</span></div>
+      </div>
+    </div>
+
+    <div class="rrow">
+      <div class="rtime">3–6 月<span class="">野菌季</span></div>
+      <div class="rbody">
+        <h4 class="">春夏野菌季 · 主打「现采新鲜野菌」</h4>
+        <p class="">从女神节双人场景起步，一路铺到五一聚餐与端午家宴；用现采、鲜菌、农场采收的实拍内容，反复强化菌汤火锅天花板。</p>
+        <div><span class="tag">现采新鲜野菌</span><span class="tag">菌汤火锅天花板</span><span class="tag">闺蜜约会</span><span class="tag">五一聚餐</span></div>
+      </div>
+    </div>
+
+    <div class="rrow big">
+      <div class="rtime">7 月<span class="">重点节点 1</span></div>
+      <div class="rbody">
+        <h4 class="">稻城亚丁松茸季 · 全平台重心</h4>
+        <p class="">松茸基地采摘溯源，把「限定季 + 高价值食材」讲透；松茸专属套餐、基地实拍、达人随行探店同时上线，商务与尝鲜两条评价线并重。</p>
+        <div><span class="tag fill">松茸限定季</span><span class="tag">稻城溯源</span><span class="tag">高价值客</span></div>
+      </div>
+    </div>
+
+    <div class="rrow big">
+      <div class="rtime">8 月<span class="">年度最大</span></div>
+      <div class="rbody">
+        <h4 class="">8.16 品牌周年庆 · 全年最大投放（单月 20 万）</h4>
+        <p class="">全平台资源倾斜，周年庆直播为核心动作，配合全年力度最大的福利；四平台同步承接，把上半年的种草一次性转化。</p>
+        <div><span class="tag fill">周年庆直播</span><span class="tag">全年最大福利</span><span class="tag">必吃榜冲分</span></div>
+      </div>
+    </div>
+
+    <div class="rrow">
+      <div class="rtime">9–10 月<span class="">节庆家宴</span></div>
+      <div class="rbody">
+        <h4 class="">中秋与国庆 · 家宴为主，内容过渡到温润养生</h4>
+        <p class="">中秋承接松茸尾期并转向秋冬滋补话术；国庆只做本地家庭与商务聚餐，减少游客关键向。</p>
+        <div><span class="tag">中秋家宴</span><span class="tag">国庆本地聚餐</span><span class="tag">减少游客词</span></div>
+      </div>
+    </div>
+
+    <div class="rrow">
+      <div class="rtime">11–12 月<span class="">养生季</span></div>
+      <div class="rbody">
+        <h4 class="">降温入冬 · 汤锅养生与年底家宴</h4>
+        <p class="">11 月做养生食补的深度心智输出，淡季沉淀评价与口感分；12 月以冬至进补接年夜饭早鸟预售，为下一年开局蓄水。</p>
+        <div><span class="tag fill">汤锅养身</span><span class="tag">温润食补</span><span class="tag">年夜饭早鸟</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="rules">
+    <div class="rule"><b class="">种本地、轻游客</b><span class="">全平台减少游客向投放，关键词与人群都锁本地。</span></div>
+    <div class="rule"><b class="">一条内容两个版本</b><span class="">稳重版给商务家宴，轻松版给年轻闺蜜与约会。</span></div>
+    <div class="rule"><b class="">淡季种、旺季收</b><span class="">淡季沉淀评价与心智，节点月集中收割订单。</span></div>
+    <div class="rule"><b class="">评价即资产</b><span class="">实拍、溯源、食材评价持续反哺必吃榜与口碑分。</span></div>
+  </div>
+</section>
+
+<!-- 05 -->
+<section id="sec5" class="wrap">
+  <div class="sec-head">
+    <div class="sec-num">05 / Monthly</div>
+    <h2 class="">十二个月，逐月拆开看</h2>
+    <p class="sec-lead">每个月只留一个核心主题，四平台各出一组动作与一份预算，金额单位万元。带标记的月份是全年重点节点。</p>
+  </div>
+
+  <div class="months">
+
+    <!-- 1月 -->
+    <article class="mcard key">
+      <div class="mhead">
+        <div class="mno">01</div>
+        <div class="mtit"><h3 class="">年夜饭预订</h3><p class="">年终收尾 · 家宴商务 · 品质团圆</p></div>
+        <div class="msum">12.5<small class="">万元</small></div>
+      </div>
+      <div class="mbody">
+        <div class="mrow" style="--c:#A9803C">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">美团点评</span><span class="pbud">5.5</span></div>
+          <ul>
+            <li class="">年夜饭包间套餐上线；推广通锁「成都高端家宴 / 商务尾牙」。</li>
+            <li class="">点星笔记铺家庭聚餐、商务宴请好评，植入 RO 净水与一人一锅。</li>
+            <li class="">少量笔记补约会双人餐，承接年轻家庭。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#33302A">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">抖音</span><span class="pbud">3.0</span></div>
+          <ul>
+            <li class="">双版本：宋式包间 / 管家服务 / 尾牙家宴；家庭团圆氛围感。</li>
+            <li class="">本地推定向同城 30–50 岁，少量放开 28–38 岁约会人群。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#A97C5E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">小红书</span><span class="pbud">2.5</span></div>
+          <ul>
+            <li class="">年夜饭氛围感打卡、包间美学种草。</li>
+            <li class="">薯条加热「成都高端家宴 / 适合家庭聚餐的菌汤火锅」。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#78836E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">视频号</span><span class="pbud">1.5</span></div>
+          <ul>
+            <li class="">老客年夜饭回访与预订通道，会员优先订包间。</li>
+            <li class="">品牌短片轻植入食材理念。</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 2月 -->
+    <article class="mcard">
+      <div class="mhead">
+        <div class="mno">02</div>
+        <div class="mtit"><h3 class="">节后淡季蓄力</h3><p class="">品牌故事 · 健康食材 · 淡季打心智</p></div>
+        <div class="msum">8.5<small class="">万元</small></div>
+      </div>
+      <div class="mbody">
+        <div class="mrow" style="--c:#A9803C">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">美团点评</span><span class="pbud">3.0</span></div>
+          <ul>
+            <li class="">推广通维持基础曝光，不做大促。</li>
+            <li class="">点星笔记沉淀农场、有机食材、RO 净水溯源评价。</li>
+            <li class="">关键词「健康汤锅 / 高端养生菌汤」，为野菌季蓄水。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#33302A">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">抖音</span><span class="pbud">2.0</span></div>
+          <ul>
+            <li class="">双版本：品牌故事 / 自有农场 / 净水熬汤纪实；闺蜜清淡养生小聚。</li>
+            <li class="">本地推小频维稳，优先种草心智，不追转化。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#A97C5E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">小红书</span><span class="pbud">2.0</span></div>
+          <ul>
+            <li class="">深度品牌故事笔记、农场食材溯源图文。</li>
+            <li class="">薯条慢加热，主推「干净食材 · 健康菌汤」。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#78836E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">视频号</span><span class="pbud">1.5</span></div>
+          <ul>
+            <li class="">品牌纪录片片段推送，唤醒沉睡老客。</li>
+            <li class="">传递长期健康食材理念。</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 3月 -->
+    <article class="mcard">
+      <div class="mhead">
+        <div class="mno">03</div>
+        <div class="mtit"><h3 class="">女神节 · 野菌季启动</h3><p class="">新鲜野菌 + 闺蜜约会 · 轻商务</p></div>
+        <div class="msum">10<small class="">万元</small></div>
+      </div>
+      <div class="mbody">
+        <div class="mrow" style="--c:#A9803C">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">美团点评</span><span class="pbud">3.0</span></div>
+          <ul>
+            <li class="">女神节双人约会套餐；推广通双关键词「高端约会餐厅 / 商务简餐」。</li>
+            <li class="">点星笔记同步铺闺蜜打卡向与商务简餐向，开始铺垫当季鲜菌。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#33302A">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">抖音</span><span class="pbud">3.0</span></div>
+          <ul>
+            <li class="">双版本：春季鲜菌商务小宴；闺蜜约会与女神聚餐氛围感。</li>
+            <li class="">本地推定向女性 25–40 岁，重点拉年轻客；内容植入当季现采野菌。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#A97C5E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">小红书</span><span class="pbud">3.0</span></div>
+          <ul>
+            <li class="">38 女神节集中种草爆发；宋式美学打卡 + 闺蜜小聚笔记铺量。</li>
+            <li class="">核心话术「当季现采鲜菌 / 菌汤火锅天花板」，薯条集中投放。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#78836E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">视频号</span><span class="pbud">1.0</span></div>
+          <ul>
+            <li class="">女神节会员专属礼遇，商务女客与老客家庭定向推送。</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 4月 -->
+    <article class="mcard">
+      <div class="mhead">
+        <div class="mno">04</div>
+        <div class="mtit"><h3 class="">春日寻鲜</h3><p class="">野菌持续上新 · 强化菌汤天花板</p></div>
+        <div class="msum">10.5<small class="">万元</small></div>
+      </div>
+      <div class="mbody">
+        <div class="mrow" style="--c:#A9803C">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">美团点评</span><span class="pbud">3.5</span></div>
+          <ul>
+            <li class="">春季野菌尝鲜套餐；推广通「春日鲜菌汤锅 / 家庭轻聚餐」。</li>
+            <li class="">点星笔记大量上新菌子实拍评价，强化现采鲜菌，兼顾少量闺蜜评价。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#33302A">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">抖音</span><span class="pbud">3.0</span></div>
+          <ul>
+            <li class="">双版本：春日鲜菌商务宴请；朋友小聚尝鲜 vlog。</li>
+            <li class="">内容拍自有农场野菌采收实拍；本地推兼顾商务与年轻同城人群。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#A97C5E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">小红书</span><span class="pbud">3.0</span></div>
+          <ul>
+            <li class="">春日山野鲜菌种草笔记、农场采菌图文。</li>
+            <li class="">持续打「菌汤火锅天花板」；达人集中上新鲜菌测评。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#78836E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">视频号</span><span class="pbud">1.0</span></div>
+          <ul>
+            <li class="">春日鲜菌上新通知，会员尝鲜预约通道。</li>
+            <li class="">农场食材故事推送。</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 5月 -->
+    <article class="mcard">
+      <div class="mhead">
+        <div class="mno">05</div>
+        <div class="mtit"><h3 class="">五一聚餐</h3><p class="">家宴 · 朋友聚餐 · 现采野菌</p></div>
+        <div class="msum">12<small class="">万元</small></div>
+      </div>
+      <div class="mbody">
+        <div class="mrow" style="--c:#A9803C">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">美团点评</span><span class="pbud">4.5</span></div>
+          <ul>
+            <li class="">五一家庭 / 朋友聚餐套餐；推广通「高端家庭聚餐 / 商务小聚」。</li>
+            <li class="">点星笔记铺聚餐实拍评价，突出当季鲜菌。</li>
+            <li class="">不投游客流量，全部锁定本地。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#33302A">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">抖音</span><span class="pbud">3.5</span></div>
+          <ul>
+            <li class="">双版本：多人家庭家宴；好友聚餐与闺蜜局实拍。</li>
+            <li class="">本地推只投同城本地人群，避开旅游流量；鲜菌汤底特写内容。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#A97C5E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">小红书</span><span class="pbud">3.0</span></div>
+          <ul>
+            <li class="">五一本地聚餐攻略、鲜菌打卡笔记。</li>
+            <li class="">薯条只投本地同城，不做旅游关键词，强化菌汤天花板。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#78836E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">视频号</span><span class="pbud">1.0</span></div>
+          <ul>
+            <li class="">五一包间优先预订，会员聚餐福利推送。</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 6月 -->
+    <article class="mcard">
+      <div class="mhead">
+        <div class="mno">06</div>
+        <div class="mtit"><h3 class="">端午 · 父亲节</h3><p class="">野菌季收尾 · 铺垫 7 月松茸</p></div>
+        <div class="msum">12<small class="">万元</small></div>
+      </div>
+      <div class="mbody">
+        <div class="mrow" style="--c:#A9803C">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">美团点评</span><span class="pbud">4.0</span></div>
+          <ul>
+            <li class="">端午家宴、父亲节家庭套餐；推广通「端午宴 / 父亲节聚餐」。</li>
+            <li class="">点星笔记收尾春野菌评价，预埋松茸预告。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#33302A">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">抖音</span><span class="pbud">3.5</span></div>
+          <ul>
+            <li class="">双版本：端午团圆家宴；年轻人轻聚餐。</li>
+            <li class="">内容预埋松茸基地预告短片，为 7 月松茸季预热。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#A97C5E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">小红书</span><span class="pbud">3.0</span></div>
+          <ul>
+            <li class="">端午家宴种草 + 少量松茸预告笔记。</li>
+            <li class="">维持菌汤天花板心智，减少大投放，蓄水等 7 月。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#78836E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">视频号</span><span class="pbud">1.5</span></div>
+          <ul>
+            <li class="">父亲节会员关怀、端午预订推送，预告 7 月松茸季。</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 7月 -->
+    <article class="mcard key">
+      <div class="mhead">
+        <span class="flag">重点节点 01</span>
+        <div class="mno">07</div>
+        <div class="mtit"><h3 class="">稻城亚丁松茸季</h3><p class="">松茸溯源 · 珍鲜食材 · 全平台重心</p></div>
+        <div class="msum">13.5<small class="">万元</small></div>
+      </div>
+      <div class="mbody">
+        <div class="mrow" style="--c:#A9803C">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">美团点评</span><span class="pbud">4.5</span></div>
+          <ul>
+            <li class="">松茸专属套餐上线；推广通「高端汤锅 / 松茸家宴」。</li>
+            <li class="">点星笔记集中出松茸实拍与基地溯源评价。</li>
+            <li class="">商务评价 + 年轻尝鲜评价双线沉淀。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#33302A">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">抖音</span><span class="pbud">4.0</span></div>
+          <ul>
+            <li class="">全平台重心放在松茸：松茸商务宴 + 松茸采拍 vlog 双版本。</li>
+            <li class="">稻城基地现场实拍素材；本地推加大投放，覆盖商务与尝鲜年轻人群。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#A97C5E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">小红书</span><span class="pbud">3.5</span></div>
+          <ul>
+            <li class="">种草主力：松茸溯源图文 / 短视频，达人基地随行探店。</li>
+            <li class="">核心心智「菌汤天花板 · 松茸限定季」，薯条集中加热松茸笔记。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#78836E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">视频号</span><span class="pbud">1.5</span></div>
+          <ul>
+            <li class="">松茸上新会员优先预约、基地纪实长视频。</li>
+            <li class="">高价值老客松茸品鉴邀约。</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 8月 -->
+    <article class="mcard key">
+      <div class="mhead">
+        <span class="flag">年度最大节点</span>
+        <div class="mno">08</div>
+        <div class="mtit"><h3 class="">8.16 品牌周年庆</h3><p class="">周年庆直播 · 全年最大力度福利 · 承接松茸尾期</p></div>
+        <div class="msum">20<small class="">万元</small></div>
+      </div>
+      <div class="mbody">
+        <div class="mrow" style="--c:#A9803C">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">美团点评</span><span class="pbud">6.5</span></div>
+          <ul>
+            <li class="">周年庆专属套餐上线；推广加大预算，关键词「周年庆聚餐 / 高端菌汤火锅」。</li>
+            <li class="">点星笔记集中铺周年庆打卡与松茸收尾评价。</li>
+            <li class="">评价素材反哺必吃榜冲分。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#33302A">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">抖音</span><span class="pbud">5.5</span></div>
+          <ul>
+            <li class="">全年投放重心：周年庆预热 + 8.16 当日直播。</li>
+            <li class="">双版本：商务周年答谢宴；年轻闺蜜 / 朋友小聚福利。</li>
+            <li class="">本地推峰值投放，引导进直播间与福利核销；松茸收尾内容。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#A97C5E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">小红书</span><span class="pbud">5.0</span></div>
+          <ul>
+            <li class="">年轻种草主力：周年庆打卡 + 限定福利笔记，达人集中探店周年庆套餐。</li>
+            <li class="">薯条加大投放，引导直播间与到店，持续强化菌汤天花板。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#78836E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">视频号</span><span class="pbud">3.0</span></div>
+          <ul>
+            <li class="">老客核心：周年庆会员答谢、老客专属加码福利。</li>
+            <li class="">直播预约提醒，高价值客一对一通知。</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 9月 -->
+    <article class="mcard">
+      <div class="mhead">
+        <div class="mno">09</div>
+        <div class="mtit"><h3 class="">中秋家宴</h3><p class="">松茸收尾 · 过渡秋冬 · 铺垫养生</p></div>
+        <div class="msum">13.5<small class="">万元</small></div>
+      </div>
+      <div class="mbody">
+        <div class="mrow" style="--c:#A9803C">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">美团点评</span><span class="pbud">5.0</span></div>
+          <ul>
+            <li class="">中秋家宴套餐；推广通「中秋高端家宴 / 商务答谢」。</li>
+            <li class="">点星笔记中秋聚餐评价 + 松茸收尾。</li>
+            <li class="">逐步植入温润养生话术。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#33302A">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">抖音</span><span class="pbud">4.0</span></div>
+          <ul>
+            <li class="">双版本：中秋商务家宴；中秋好友小聚。</li>
+            <li class="">内容从松茸过渡到秋冬温润滋补。</li>
+            <li class="">本地推稳定投本地客，不做旅游向。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#A97C5E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">小红书</span><span class="pbud">3.0</span></div>
+          <ul>
+            <li class="">中秋家宴氛围感笔记 + 轻养生铺垫。</li>
+            <li class="">维持菌汤天花板心智，降低投放强度。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#78836E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">视频号</span><span class="pbud">1.5</span></div>
+          <ul>
+            <li class="">中秋包间预订推送，会员团圆福利。</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 10月 -->
+    <article class="mcard">
+      <div class="mhead">
+        <div class="mno">10</div>
+        <div class="mtit"><h3 class="">国庆家宴</h3><p class="">本地家庭 · 商务聚餐 · 不做游客向</p></div>
+        <div class="msum">13.5<small class="">万元</small></div>
+      </div>
+      <div class="mbody">
+        <div class="mrow" style="--c:#A9803C">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">美团点评</span><span class="pbud">5.0</span></div>
+          <ul>
+            <li class="">国庆本地聚餐套餐；推广通锁「本地家庭聚餐 / 商务宴请」。</li>
+            <li class="">严格规避游客关键词。</li>
+            <li class="">点星笔记铺家庭聚餐评价，植入温和养生卖点。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#33302A">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">抖音</span><span class="pbud">4.0</span></div>
+          <ul>
+            <li class="">双版本：多人商务家宴；朋友小聚。</li>
+            <li class="">本地推定向本地常住人群，过滤旅游流量。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#A97C5E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">小红书</span><span class="pbud">3.0</span></div>
+          <ul>
+            <li class="">国庆本地聚餐打卡、宋式环境出片笔记。</li>
+            <li class="">适度铺垫养生内容。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#78836E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">视频号</span><span class="pbud">1.5</span></div>
+          <ul>
+            <li class="">国庆包间优先预订，老客专属权益。</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 11月 -->
+    <article class="mcard key">
+      <div class="mhead">
+        <span class="flag">重点节点 02</span>
+        <div class="mno">11</div>
+        <div class="mtit"><h3 class="">降温入冬 · 汤锅养生季</h3><p class="">健康食补 · 温润养生 · 淡季深度心智</p></div>
+        <div class="msum">11.5<small class="">万元</small></div>
+      </div>
+      <div class="mbody">
+        <div class="mrow" style="--c:#A9803C">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">美团点评</span><span class="pbud">3.5</span></div>
+          <ul>
+            <li class="">养生食补套餐上线；推广通「养生汤锅 / 健康菌汤」。</li>
+            <li class="">淡季重点做评价沉淀：大量产出食材、净水、有机、食补向评价。</li>
+            <li class="">助力必吃榜口味分。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#33302A">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">抖音</span><span class="pbud">3.5</span></div>
+          <ul>
+            <li class="">双版本：秋冬商务养生宴请；降温闺蜜暖心小聚。</li>
+            <li class="">内容主打菌汤温润滋补、干净食材。</li>
+            <li class="">本地推维稳种草，侧重养生心智。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#A97C5E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">小红书</span><span class="pbud">3.0</span></div>
+          <ul>
+            <li class="">秋冬养生汤锅笔记、轻负担火锅种草。</li>
+            <li class="">持续强化菌汤天花板；薯条慢种草，不追短期转化。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#78836E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">视频号</span><span class="pbud">1.5</span></div>
+          <ul>
+            <li class="">秋冬食补理念、会员养生专属套餐推送。</li>
+            <li class="">品牌故事与食材价值深度触达。</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- 12月 -->
+    <article class="mcard">
+      <div class="mhead">
+        <div class="mno">12</div>
+        <div class="mtit"><h3 class="">冬至 · 年夜饭预售</h3><p class="">冬令进补 · 团圆家宴 · 为次年蓄水</p></div>
+        <div class="msum">12.5<small class="">万元</small></div>
+      </div>
+      <div class="mbody">
+        <div class="mrow" style="--c:#A9803C">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">美团点评</span><span class="pbud">4.5</span></div>
+          <ul>
+            <li class="">冬至进补套餐 + 年夜饭早鸟预订；推广通「冬至养生 / 年夜饭预订」。</li>
+            <li class="">点星笔记补进补向评价，提前锁定年夜饭订单。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#33302A">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">抖音</span><span class="pbud">3.0</span></div>
+          <ul>
+            <li class="">双版本：冬至家宴、年终商务聚餐；暖心汤锅与年夜饭探店笔记。</li>
+            <li class="">内容温润养生，启动下一年年夜饭蓄水。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#A97C5E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">小红书</span><span class="pbud">3.5</span></div>
+          <ul>
+            <li class="">冬至暖心汤锅、年夜饭早鸟预订种草笔记。</li>
+          </ul>
+        </div>
+        <div class="mrow" style="--c:#78836E">
+          <div class="mrow-top"><span class="pm"></span><span class="pname">视频号</span><span class="pbud">1.5</span></div>
+          <ul>
+            <li class="">年夜饭早鸟预订通知、冬至会员福利、年终会员答谢。</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- 06 -->
+<section id="sec6" class="wrap">
+  <div class="sec-head">
+    <div class="sec-num">06 / Targets</div>
+    <h2 class="">各平台年度目标</h2>
+    <p class="sec-lead">每个平台两条线考核：一条看流量与种草，一条看转化与运营。前者决定明年还有多少新客可接，后者决定今年的钱花得值不值。</p>
+  </div>
+
+  <div class="goals">
+    <article class="gcard" style="--c:#A9803C">
+      <h3 class="">美团点评 <span class="">转化主阵地</span></h3>
+      <div class="gcol">
+        <h5 class="">年度流量与种草目标</h5>
+        <ul>
+          <li class="">店铺年曝光 <b class="kpi">≥ 100 万</b></li>
+          <li class="">推广通进店 UV <b class="kpi">同比 +25%</b></li>
+          <li class="">评价池中差评常年 <b class="kpi">≤ 2%</b></li>
+          <li class="">食材溯源 / 品牌向评价占比提升</li>
+        </ul>
+      </div>
+      <div class="gcol">
+        <h5 class="">转化与运营目标</h5>
+        <ul>
+          <li class="">套餐核销 GMV <b class="kpi">同比 +30%</b></li>
+          <li class="">门店口味分 <b class="kpi">≥ 4.8</b></li>
+          <li class="">冲刺必吃榜</li>
+          <li class="">商务 + 家庭订单为基本盘，年轻客搜索占比提升</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="gcard" style="--c:#33302A">
+      <h3 class="">抖音 <span class="">同城破圈</span></h3>
+      <div class="gcol">
+        <h5 class="">年度流量与种草目标</h5>
+        <ul>
+          <li class="">官号粉丝 <b class="kpi">≥ 1 万</b></li>
+          <li class="">同城年播放 <b class="kpi">≥ 1500 万</b></li>
+          <li class="">周年庆直播总观看 <b class="kpi">≥ 10 万 +</b></li>
+        </ul>
+      </div>
+      <div class="gcol">
+        <h5 class="">转化与运营目标</h5>
+        <ul>
+          <li class="">团购核销 GMV <b class="kpi">同比 +20%</b></li>
+          <li class="">话题讨论 <b class="kpi">≥ 1 万次</b></li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="gcard" style="--c:#A97C5E">
+      <h3 class="">小红书 <span class="">种草心智</span></h3>
+      <div class="gcol">
+        <h5 class="">年度流量与种草目标</h5>
+        <ul>
+          <li class="">官号粉丝 <b class="kpi">≥ 5000</b></li>
+          <li class="">品牌笔记 <b class="kpi">≥ 300 篇</b></li>
+          <li class="">种草曝光 <b class="kpi">≥ 500 万</b></li>
+          <li class="">品牌词「享月汤皇 / 菌汤火锅天花板」搜索量提升</li>
+          <li class="">话题讨论 <b class="kpi">≥ 1 万次</b></li>
+        </ul>
+      </div>
+      <div class="gcol">
+        <h5 class="">转化与运营目标</h5>
+        <ul>
+          <li class="">小红书引流到点评 / 到店 UV 月均稳步上涨</li>
+          <li class="">新增 22–38 岁年轻客认知建立</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="gcard" style="--c:#78836E">
+      <h3 class="">视频号 <span class="">私域老客</span></h3>
+      <div class="gcol">
+        <h5 class="">年度流量与种草目标</h5>
+        <ul>
+          <li class="">官号粉丝 <b class="kpi">≥ 5000</b></li>
+          <li class="">内容年播放 <b class="kpi">≥ 1000 万</b></li>
+          <li class="">视频均赞 <b class="kpi">100 +</b></li>
+        </ul>
+      </div>
+      <div class="gcol">
+        <h5 class="">转化与运营目标</h5>
+        <ul>
+          <li class="">企微会员池新增 <b class="kpi">≥ 3000 人</b></li>
+          <li class="">会员复购率 <b class="kpi">≥ 20%</b></li>
+          <li class="">商务与家宴老客订单稳定盘</li>
+        </ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- 07 -->
+<section id="sec7" class="wrap">
+  <div class="sec-head">
+    <div class="sec-num">07 / Overview</div>
+    <h2 class="">全年总览</h2>
+    <p class="sec-lead">十二个月的主题、四平台金额与月度合计。</p>
+  </div>
+
+  <table class="matrix">
+    <thead>
+      <tr>
+        <th class="">月份</th>
+        <th class="">月度核心主题</th>
+        <th class="">美团点评</th>
+        <th class="">抖音</th>
+        <th class="">小红书</th>
+        <th class="">视频号</th>
+        <th class="">月度合计</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td class="mo">1 月</td><td class="theme">年终收尾 · 年夜饭预订：家宴商务、品质团圆</td><td class="">5.5</td><td class="">3.0</td><td class="">2.5</td><td class="">1.5</td><td class="tot"><span class="heat" style="background:rgba(169,128,60,0.18)">12.5</span></td></tr>
+      <tr><td class="mo">2 月</td><td class="theme">节后淡季蓄力：品牌故事、健康食材</td><td class="">3.0</td><td class="">2.0</td><td class="">2.0</td><td class="">1.5</td><td class="tot"><span class="heat" style="background:rgba(169,128,60,0.03)">8.5</span></td></tr>
+      <tr><td class="mo">3 月</td><td class="theme">38 女神节 + 春夏野菌季启动</td><td class="">3.0</td><td class="">3.0</td><td class="">3.0</td><td class="">1.0</td><td class="tot"><span class="heat" style="background:rgba(169,128,60,0.09)">10</span></td></tr>
+      <tr><td class="mo">4 月</td><td class="theme">春日寻鲜：现采新鲜野菌、强化天花板心智</td><td class="">3.5</td><td class="">3.0</td><td class="">3.0</td><td class="">1.0</td><td class="tot"><span class="heat" style="background:rgba(169,128,60,0.1)">10.5</span></td></tr>
+      <tr><td class="mo">5 月</td><td class="theme">五一聚餐：家宴、朋友聚餐、现采野菌</td><td class="">4.5</td><td class="">3.5</td><td class="">3.0</td><td class="">1.0</td><td class="tot"><span class="heat" style="background:rgba(169,128,60,0.16)">12</span></td></tr>
+      <tr><td class="mo">6 月</td><td class="theme">端午 + 父亲节：野菌季收尾、铺垫松茸</td><td class="">4.0</td><td class="">3.5</td><td class="">3.0</td><td class="">1.5</td><td class="tot"><span class="heat" style="background:rgba(169,128,60,0.16)">12</span></td></tr>
+      <tr><td class="mo">7 月</td><td class="theme">稻城亚丁松茸季：年度重点节点 1</td><td class="">4.5</td><td class="">4.0</td><td class="">3.5</td><td class="">1.5</td><td class="tot"><span class="heat" style="background:rgba(169,128,60,0.21)">13.5</span></td></tr>
+      <tr><td class="mo">8 月</td><td class="theme">8.16 品牌周年庆：年度最大节点，全平台倾斜</td><td class="">6.5</td><td class="">5.5</td><td class="">5.0</td><td class="">3.0</td><td class="tot"><span class="heat hot" style="background:rgba(169,128,60,0.45)">20</span></td></tr>
+      <tr><td class="mo">9 月</td><td class="theme">中秋家宴：松茸收尾、过渡秋冬</td><td class="">5.0</td><td class="">4.0</td><td class="">3.0</td><td class="">1.5</td><td class="tot"><span class="heat" style="background:rgba(169,128,60,0.21)">13.5</span></td></tr>
+      <tr><td class="mo">10 月</td><td class="theme">国庆家宴：本地家庭、商务聚餐</td><td class="">5.0</td><td class="">4.0</td><td class="">3.0</td><td class="">1.5</td><td class="tot"><span class="heat" style="background:rgba(169,128,60,0.21)">13.5</span></td></tr>
+      <tr><td class="mo">11 月</td><td class="theme">降温入冬 · 汤锅养生季：年度重点节点 2</td><td class="">3.5</td><td class="">3.5</td><td class="">3.0</td><td class="">1.5</td><td class="tot"><span class="heat" style="background:rgba(169,128,60,0.14)">11.5</span></td></tr>
+      <tr><td class="mo">12 月</td><td class="theme">冬至 + 年夜饭预售：冬令进补、团圆家宴</td><td class="">4.5</td><td class="">3.0</td><td class="">3.5</td><td class="">1.5</td><td class="tot"><span class="heat" style="background:rgba(169,128,60,0.18)">12.5</span></td></tr>
+      <tr class="sum"><td class="mo">合计</td><td class="theme">全年 150 万元</td><td class="">52.5</td><td class="">42</td><td class="">37.5</td><td class="">18</td><td class="tot">150</td></tr>
+    </tbody>
+  </table>
+</section>
+
+
+
+
+<script>
+  /* ---------- 顶部进度 ---------- */
+  (function(){
+    var prog = document.getElementById('prog');
+    var navLinks = [].slice.call(document.querySelectorAll('#nav a'));
+    var secs = navLinks.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+
+    function onScroll(){
+      var h = document.documentElement.scrollHeight - window.innerHeight;
+      prog.style.width = (h > 0 ? (window.scrollY / h) * 100 : 0) + '%';
+      var idx = -1;
+      secs.forEach(function(s, i){
+        if (s && s.getBoundingClientRect().top <= window.innerHeight * 0.35) idx = i;
+      });
+      navLinks.forEach(function(a, i){ a.classList.toggle('on', i === idx); });
+    }
+    window.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+  })();
+
+  /* ---------- 就地编辑 ---------- */
+  (function(){
+    var KEY = 'xy_plan_2027_edits';
+
+    /* 1. 所有含文字的元素都可点击编辑 */
+    document.querySelectorAll('header, section').forEach(function(r){
+      r.querySelectorAll('*').forEach(function(el){
+        if (el.closest('svg') || el.closest('.nav, .progress, .utilbar')) return;
+        if (el.tagName === 'SCRIPT' || el.tagName === 'STYLE') return;
+        for (var i = 0; i < el.childNodes.length; i++){
+          var n = el.childNodes[i];
+          if (n.nodeType === 3 && n.nodeValue.replace(/\s/g, '').length){
+            el.setAttribute('contenteditable', 'true');
+            el.setAttribute('spellcheck', 'false');
+            el.classList.add('ed');
+            break;
+          }
+        }
+      });
+    });
+
+    var nodes = [].slice.call(document.querySelectorAll('.ed'));
+
+    /* 2. 自动恢复上次改动 */
+    try {
+      var saved = JSON.parse(localStorage.getItem(KEY) || 'null');
+      if (saved && saved.length === nodes.length){
+        nodes.forEach(function(n, i){ n.innerHTML = saved[i]; });
+      }
+    } catch(e){}
+
+    var timer = null;
+    function save(){
+      clearTimeout(timer);
+      timer = setTimeout(function(){
+        try {
+          localStorage.setItem(KEY, JSON.stringify(nodes.map(function(n){ return n.innerHTML; })));
+        } catch(e){}
+      }, 400);
+    }
+    document.addEventListener('input', function(e){
+      if (e.target.classList && e.target.classList.contains('ed')) save();
+    });
+
+    /* 3. 回车换行、纯文本粘贴，避免把版式弄乱 */
+    document.addEventListener('keydown', function(e){
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === 's'){
+        e.preventDefault(); exportFile(); return;
+      }
+      var t = e.target;
+      if (!t || !t.classList || !t.classList.contains('ed')) return;
+      if (e.key === 'Enter' && !e.shiftKey && t.tagName !== 'LI'){
+        e.preventDefault();
+        document.execCommand('insertLineBreak');
+        save();
+      }
+    });
+    document.addEventListener('paste', function(e){
+      var t = e.target;
+      if (!t || !t.classList || !t.classList.contains('ed')) return;
+      e.preventDefault();
+      var txt = (e.clipboardData || window.clipboardData).getData('text/plain');
+      document.execCommand('insertText', false, txt);
+      save();
+    });
+
+    /* 4. 导出当前页面 */
+    function exportFile(){
+      var clone = document.documentElement.cloneNode(true);
+      var eds = clone.querySelectorAll('[contenteditable]');
+      for (var i = 0; i < eds.length; i++){
+        eds[i].removeAttribute('contenteditable');
+        eds[i].removeAttribute('spellcheck');
+        eds[i].classList.remove('ed');
+      }
+      var bar = clone.querySelector('.utilbar');
+      var ts  = clone.querySelector('.toast');
+      if (bar) bar.parentNode.removeChild(bar);
+      if (ts)  ts.parentNode.removeChild(ts);
+
+      var html = '<!DOCTYPE html>\n' + clone.outerHTML;
+      var blob = new Blob([html], {type:'text/html;charset=utf-8'});
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = '享月汤皇-2027年度品牌投放方案.html';
+      document.body.appendChild(a);
+      a.click();
+      setTimeout(function(){ URL.revokeObjectURL(a.href); a.parentNode.removeChild(a); }, 300);
+      tip('已导出 HTML');
+    }
+
+    var toast = document.getElementById('toast'), tt = null;
+    function tip(msg){
+      toast.textContent = msg;
+      toast.classList.add('on');
+      clearTimeout(tt);
+      tt = setTimeout(function(){ toast.classList.remove('on'); }, 1700);
+    }
+
+    document.getElementById('btnSave').addEventListener('click', exportFile);
+    document.getElementById('btnReset').addEventListener('click', function(){
+      if (!confirm('放弃所有修改，恢复初始内容？')) return;
+      try { localStorage.removeItem(KEY); } catch(e){}
+      location.reload();
+    });
+  })();
+</script>
+
+
+</body></html>
